@@ -8,7 +8,7 @@ namespace Matrix
 {
     public class CoolMatrix
     {
-        public int[,] ArrInts { get; set; }
+        public int[,] ArrInts { get; private set; }
         public Size Size { get; private set; }
         public bool IsSquare => Size.IsSquare;
 
