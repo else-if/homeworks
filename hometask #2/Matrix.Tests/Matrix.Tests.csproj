@@ -31,8 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Matrix">
-      <HintPath>..\CoolMatrix\bin\Release\Matrix.dll</HintPath>
+    <Reference Include="Matrix, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Matrix\bin\Release\Matrix.dll</HintPath>
     </Reference>
     <Reference Include="MatrixSize">
       <HintPath>..\MatrixSize\bin\Release\MatrixSize.dll</HintPath>
