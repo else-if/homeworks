@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matrix.Tests", "Matrix.Tests\Matrix.Tests.csproj", "{27B8F050-436C-4643-8B56-B2F603D00149}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matrix", "CoolMatrix\Matrix.csproj", "{56B87B57-5DA2-443B-BA75-8452A807E4A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matrix", "Matrix\Matrix.csproj", "{56B87B57-5DA2-443B-BA75-8452A807E4A1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixSize", "MatrixSize\MatrixSize.csproj", "{AE266354-3927-4F2C-B508-9675F82F64AD}"
 EndProject
