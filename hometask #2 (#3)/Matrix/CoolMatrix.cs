@@ -1,25 +1,21 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using MatrixSize;
 
 namespace Matrix
 {
     public class CoolMatrix
     {
-        public int[,] ArrInts { get; private set; }
+        private int[,] _arrInts;
         public Size Size { get; private set; }
         public bool IsSquare => Size.IsSquare;
 
         public CoolMatrix(int[,] array)
         {
-            if (ReferenceEquals(null, array)) throw new ArgumentNullException("array");
+            if (ReferenceEquals(null, array)) throw new ArgumentNullException(nameof(array));
 
             Size = new Size(array.GetLength(0), array.GetLength(1));
 
-            ArrInts = new int[Size.Width, Size.Height];
-            Array.Copy(array, ArrInts, array.Length);
+            _arrInts = new int[Size.Width, Size.Height];
+            Array.Copy(array, _arrInts, array.Length);
         }
         
         public static implicit operator CoolMatrix (int[,] array)
@@ -35,7 +31,7 @@ namespace Matrix
                 result += i == 0 ? "" : Environment.NewLine;
 
                 for (var j = 0; j < Size.Height; j++)
-                    result += (j == 0 ? "[" : ", ") + ArrInts[i, j];
+                    result += (j == 0 ? "[" : ", ") + _arrInts[i, j];
 
                 result += "]";
             }
@@ -51,7 +47,7 @@ namespace Matrix
                      (row < 0) || (row >= Size.Height))
                     throw new IndexOutOfRangeException();
 
-                return ArrInts[row, col];
+                return _arrInts[row, col];
             }
             set
             {
@@ -59,11 +55,11 @@ namespace Matrix
                      (row < 0) || (row >= Size.Height))
                     throw new IndexOutOfRangeException();
 
-                ArrInts[row, col] = value;
+                _arrInts[row, col] = value;
             }
         }
 
-        protected bool Equals(CoolMatrix other)
+        private bool Equals(CoolMatrix other)
         {
             if (ReferenceEquals(null, other)) return false;
             if (Size != other.Size) return false;
@@ -71,7 +67,7 @@ namespace Matrix
             for(var i=0;i<Size.Width;i++)
                 for (var j = 0; j < Size.Height; j++)
                 {
-                    if (ArrInts[i, j] != other.ArrInts[i, j]) return false;
+                    if (_arrInts[i, j] != other._arrInts[i, j]) return false;
                 }
             return true;
         }
@@ -80,13 +76,13 @@ namespace Matrix
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
-            if (obj.GetType() != this.GetType()) return false;
+            if (obj.GetType() != GetType()) return false;
             return Equals((CoolMatrix)obj);
         }
 
         public override int GetHashCode()
         {
-            return (ArrInts != null ? ArrInts.GetHashCode() : 0);
+            return _arrInts?.GetHashCode() ?? 0;
         }
 
         public static bool operator ==(CoolMatrix left, CoolMatrix right)
@@ -101,12 +97,12 @@ namespace Matrix
 
         public static CoolMatrix operator *(CoolMatrix left, int right)
         {
-            CoolMatrix result = left.ArrInts;
+            CoolMatrix result = left._arrInts;
 
             for (var i = 0; i < result.Size.Width; i++)
             {
                 for (var j = 0; j < result.Size.Height; j++)
-                    result.ArrInts[i, j] *= right;
+                    result._arrInts[i, j] *= right;
             }
         
             return result;
@@ -121,7 +117,7 @@ namespace Matrix
             for (var i = 0; i < result.Size.Width; i++)
             {
                 for (var j = 0; j < result.Size.Height; j++)
-                    result.ArrInts[i, j] = left.ArrInts[i, j] + right.ArrInts[i, j];
+                    result._arrInts[i, j] = left._arrInts[i, j] + right._arrInts[i, j];
             }
 
             return result;
@@ -133,10 +129,10 @@ namespace Matrix
 
             for (var i = 0; i < Size.Width; i++)
                 for (var j = 0; j < Size.Height; j++)
-                    transposedArray[j, i] = ArrInts[i, j];
+                    transposedArray[j, i] = _arrInts[i, j];
 
             Size = new Size(transposedArray.GetLength(0), transposedArray.GetLength(1));
-            ArrInts = transposedArray;
+            _arrInts = transposedArray;
 
             return this;
         }

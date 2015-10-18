@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Drawing;
-using MatrixSize;
 using NUnit.Framework;
 
 namespace Matrix.Tests

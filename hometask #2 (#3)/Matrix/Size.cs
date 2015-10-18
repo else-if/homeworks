@@ -1,21 +1,19 @@
-﻿namespace MatrixSize
+﻿namespace Matrix
+
 {
     public class Size
     {
-        public int Width { get; private set; }
-        public int Height { get; private set; }
-        public bool IsSquare
-        {
-            get { return Width == Height; }
-        }
+        public int Width { get; }
+        public int Height { get; }
+        public bool IsSquare => Width == Height;
 
         public Size(int width, int height)
         {
-            this.Width = width;
-            this.Height = height;
+            Width = width;
+            Height = height;
         }
 
-        protected bool Equals(Size other)
+        private bool Equals(Size other)
         {
             return Width == other.Width && Height == other.Height;
         }
@@ -24,15 +22,15 @@
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
-            if (obj.GetType() != this.GetType()) return false;
-            return Equals((Size) obj);
+            if (obj.GetType() != GetType()) return false;
+            return Equals((Size)obj);
         }
 
         public override int GetHashCode()
         {
             unchecked
             {
-                return (Width*397) ^ Height;
+                return (Width * 397) ^ Height;
             }
         }
 

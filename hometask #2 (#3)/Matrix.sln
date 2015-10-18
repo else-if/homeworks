@@ -5,16 +5,10 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matrix.Tests", "Matrix.Tests\Matrix.Tests.csproj", "{27B8F050-436C-4643-8B56-B2F603D00149}"
 	ProjectSection(ProjectDependencies) = postProject
-		{AE266354-3927-4F2C-B508-9675F82F64AD} = {AE266354-3927-4F2C-B508-9675F82F64AD}
 		{56B87B57-5DA2-443B-BA75-8452A807E4A1} = {56B87B57-5DA2-443B-BA75-8452A807E4A1}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matrix", "Matrix\Matrix.csproj", "{56B87B57-5DA2-443B-BA75-8452A807E4A1}"
-	ProjectSection(ProjectDependencies) = postProject
-		{AE266354-3927-4F2C-B508-9675F82F64AD} = {AE266354-3927-4F2C-B508-9675F82F64AD}
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixSize", "MatrixSize\MatrixSize.csproj", "{AE266354-3927-4F2C-B508-9675F82F64AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,10 +24,6 @@ Global
 		{56B87B57-5DA2-443B-BA75-8452A807E4A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56B87B57-5DA2-443B-BA75-8452A807E4A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56B87B57-5DA2-443B-BA75-8452A807E4A1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AE266354-3927-4F2C-B508-9675F82F64AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AE266354-3927-4F2C-B508-9675F82F64AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AE266354-3927-4F2C-B508-9675F82F64AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AE266354-3927-4F2C-B508-9675F82F64AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

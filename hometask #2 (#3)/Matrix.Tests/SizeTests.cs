@@ -1,5 +1,4 @@
-﻿using MatrixSize;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace Matrix.Tests
 {
