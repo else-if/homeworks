@@ -32,10 +32,5 @@ namespace OOP.Shapes
 	        return Radius*Radius*Math.PI;
 	    }
 
-	    public override void Move(int deltaX, int deltaY)
-	    {
-	        CoordX += deltaX;
-	        CoordY += deltaY;
-	    }
-	}
+    }
 }

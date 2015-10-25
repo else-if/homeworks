@@ -53,12 +53,6 @@ namespace OOP.Shapes
             double semiperimeter = GetPerimeter()/2d;
             return Math.Sqrt(semiperimeter * (semiperimeter - Edge1)*(semiperimeter - Edge2)*(semiperimeter - Edge3));
         }
-
-        public override void Move(int deltaX, int deltaY)
-        {
-            CoordX += deltaX;
-            CoordY += deltaY;
-        }
         
     }
 }

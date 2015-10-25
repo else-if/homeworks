@@ -29,9 +29,14 @@ namespace OOP
 
 		public abstract double GetPerimeter();
 		protected abstract double Area();
-		public abstract void Move(int deltaX, int deltaY);
 
-        public override string ToString()
+	    public virtual void Move(int deltaX, int deltaY)
+        {
+            CoordX += deltaX;
+            CoordY += deltaY;
+        }
+
+	    public override string ToString()
         {
             return
                 $"Shape information: Name : {ShapeName}, X : {CoordX}, Y : {CoordY}, Perimeter : {GetPerimeter()}, Square : {GetArea()}";

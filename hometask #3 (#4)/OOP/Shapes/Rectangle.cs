@@ -36,12 +36,6 @@ namespace OOP.Shapes
         {
             return Edge1*Edge2;
         }
-
-        public override void Move(int deltaX, int deltaY)
-        {
-            CoordX += deltaX;
-            CoordY += deltaY;
-        }
         
     }
 }
