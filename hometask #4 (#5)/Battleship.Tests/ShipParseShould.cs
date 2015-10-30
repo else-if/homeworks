@@ -8,7 +8,7 @@ namespace Battleship.Tests
         //[TestCase("A1", 1u, 1u, 1u, Direction.Horizontal)]
         //[TestCase("A2x2", 1u, 2u, 2u, Direction.Horizontal)]
         //[TestCase("A2x2-", 1u, 2u, 2u, Direction.Horizontal)]
-        //[TestCase("A2x2|", 1u, 2u, 2u, Direction.Vertiacal)]
+        //[TestCase("A2x2|", 1u, 2u, 2u, Direction.Vertical)]
         //public void ParseNotation(string notation, uint expectedX, uint expectedY, uint expectedLength, Direction expectedDirection)
         //{
         //    var position = Ship.Parse(notation);
