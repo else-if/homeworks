@@ -1,10 +1,10 @@
-﻿using System;
+﻿using Battleship.Ships.ShipAttributes;
 
-namespace Battleship
+namespace Battleship.Ships.ShipsSamples
 {
     public class PatrolBoat : Ship
     {
-        public PatrolBoat(uint x, uint y) : base(x, y, Direction.None, 1)
+        public PatrolBoat(uint x, uint y) : base(x, y, Direction.Horizontal, 1)
         {
         }
         public PatrolBoat(uint x, uint y, Direction direction) : base(x, y, direction, 1)

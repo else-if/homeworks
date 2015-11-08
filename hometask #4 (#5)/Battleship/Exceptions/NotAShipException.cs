@@ -1,0 +1,24 @@
+﻿using System;
+using System.Runtime.Serialization;
+
+namespace Battleship.Exceptions
+{
+    public class NotAShipException : Exception
+    {
+        public NotAShipException()
+        {
+        }
+
+        public NotAShipException(string message) : base(message)
+        {
+        }
+
+        public NotAShipException(string message, Exception innerException) : base(message, innerException)
+        {
+        }
+
+        protected NotAShipException(SerializationInfo info, StreamingContext context) : base(info, context)
+        {
+        }
+    }
+}
