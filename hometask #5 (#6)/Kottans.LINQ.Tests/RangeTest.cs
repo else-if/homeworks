@@ -1,7 +1,8 @@
 ﻿using System;
-using System.Linq;
+//using System.Linq;
 using Kottans.LINQ.Tests.Helpers;
 using NUnit.Framework;
+using Enumerable = Kottans.LINQ.KottansLinq;
 
 namespace Kottans.LINQ.Tests
 {

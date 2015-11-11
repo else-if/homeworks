@@ -1,6 +1,7 @@
 ﻿using System;
-using System.Linq;
+//using System.Linq;
 using NUnit.Framework;
+using Kottans.LINQ;
 
 namespace Kottans.LINQ.Tests
 {
@@ -201,7 +202,7 @@ namespace Kottans.LINQ.Tests
         public void NullSourceInt64WithSelector()
         {
             string[] source = null;
-            Assert.Throws<ArgumentNullException>(() => source.Sum(x => (long) x.Length));
+            Assert.Throws<ArgumentNullException>(() => source.Sum(x => (long)x.Length));
         }
 
         [Test]
@@ -252,7 +253,7 @@ namespace Kottans.LINQ.Tests
         public void EmptySequenceInt64WithSelector()
         {
             string[] source = { };
-            Assert.AreEqual(0, source.Sum(x => (long) x.Length));
+            Assert.AreEqual(0, source.Sum(x => (long)x.Length));
         }
 
         [Test]
@@ -294,7 +295,7 @@ namespace Kottans.LINQ.Tests
         public void SimpleSumInt64WithSelector()
         {
             string[] source = { "x", "abc", "de" };
-            Assert.AreEqual(6, source.Sum(x => (long) x.Length));
+            Assert.AreEqual(6, source.Sum(x => (long)x.Length));
         }
 
         [Test]
@@ -368,7 +369,7 @@ namespace Kottans.LINQ.Tests
         public void NullSourceDecimalWithSelector()
         {
             string[] source = null;
-            Assert.Throws<ArgumentNullException>(() => source.Sum(x => (decimal) x.Length));
+            Assert.Throws<ArgumentNullException>(() => source.Sum(x => (decimal)x.Length));
         }
 
         [Test]
@@ -419,7 +420,7 @@ namespace Kottans.LINQ.Tests
         public void EmptySequenceDecimalWithSelector()
         {
             string[] source = { };
-            Assert.AreEqual(0, source.Sum(x => (decimal) x.Length));
+            Assert.AreEqual(0, source.Sum(x => (decimal)x.Length));
         }
 
         [Test]
@@ -461,7 +462,7 @@ namespace Kottans.LINQ.Tests
         public void SimpleSumDecimalWithSelector()
         {
             string[] source = { "x", "abc", "de" };
-            Assert.AreEqual(6, source.Sum(x => (decimal) x.Length));
+            Assert.AreEqual(6, source.Sum(x => (decimal)x.Length));
         }
 
         [Test]
@@ -535,7 +536,7 @@ namespace Kottans.LINQ.Tests
         public void NullSourceSingleWithSelector()
         {
             string[] source = null;
-            Assert.Throws<ArgumentNullException>(() => source.Sum(x => (float) x.Length));
+            Assert.Throws<ArgumentNullException>(() => source.Sum(x => (float)x.Length));
         }
 
         [Test]
@@ -586,7 +587,7 @@ namespace Kottans.LINQ.Tests
         public void EmptySequenceSingleWithSelector()
         {
             string[] source = { };
-            Assert.AreEqual(0, source.Sum(x => (float) x.Length));
+            Assert.AreEqual(0, source.Sum(x => (float)x.Length));
         }
 
         [Test]
@@ -642,7 +643,7 @@ namespace Kottans.LINQ.Tests
         public void SimpleSumSingleWithSelector()
         {
             string[] source = { "x", "abc", "de" };
-            Assert.AreEqual(6, source.Sum(x => (float) x.Length));
+            Assert.AreEqual(6, source.Sum(x => (float)x.Length));
         }
 
         [Test]
@@ -670,7 +671,7 @@ namespace Kottans.LINQ.Tests
         public void SimpleSumNullableSingleWithSelectorWithNan()
         {
             string[] source = { "x", "abc", "de" };
-            Assert.IsNaN(source.Sum(x => x.Length == 3 ? x.Length : (float?) float.NaN));
+            Assert.IsNaN(source.Sum(x => x.Length == 3 ? x.Length : (float?)float.NaN));
         }
 
         [Test]
@@ -751,7 +752,7 @@ namespace Kottans.LINQ.Tests
         public void NullSourceDoubleWithSelector()
         {
             string[] source = null;
-            Assert.Throws<ArgumentNullException>(() => source.Sum(x => (double) x.Length));
+            Assert.Throws<ArgumentNullException>(() => source.Sum(x => (double)x.Length));
         }
 
         [Test]
@@ -802,7 +803,7 @@ namespace Kottans.LINQ.Tests
         public void EmptySequenceDoubleWithSelector()
         {
             string[] source = { };
-            Assert.AreEqual(0, source.Sum(x => (double) x.Length));
+            Assert.AreEqual(0, source.Sum(x => (double)x.Length));
         }
 
         [Test]
@@ -858,7 +859,7 @@ namespace Kottans.LINQ.Tests
         public void SimpleSumDoubleWithSelector()
         {
             string[] source = { "x", "abc", "de" };
-            Assert.AreEqual(6, source.Sum(x => (double) x.Length));
+            Assert.AreEqual(6, source.Sum(x => (double)x.Length));
         }
 
         [Test]

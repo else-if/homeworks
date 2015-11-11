@@ -40,9 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExtentionsSelect.cs" />
-    <Compile Include="ExtentionsFirstOrDefault.cs" />
-    <Compile Include="ExtentionsWhere.cs" />
+    <Compile Include="Concat.cs" />
+    <Compile Include="Sum.cs" />
+    <Compile Include="Range.cs" />
+    <Compile Include="Count.cs" />
+    <Compile Include="Select.cs" />
+    <Compile Include="FirstOrDefault.cs" />
+    <Compile Include="Where.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
